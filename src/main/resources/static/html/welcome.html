@@ -1,0 +1,26 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<Script>
+
+function callAPI(){
+	 var bookid='1';
+	 $.ajax({
+	 type:"GET",
+	 url: "http://localhost:8088/api/book/"+bookid, 
+	 success: function(result){
+	  console.log(result);
+	  },
+	  error: function(xhr){
+	  console.log(xhr);
+	  }
+	  });
+}
+</Script>
+</head>
+<body>
+<h1>Welcome!!!!!</h1>
+
+<input type="button" value="submit" onClick="callAPI();"/>
+</body>
+</html>
